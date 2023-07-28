@@ -46,7 +46,7 @@ The backend provides the following API endpoints:
 
 ## Deployment
 
-The Airbnb Clone application is deployed and accessible at [your-deployed-url](https://ann-booking-app.vercel.app).
+The Airbnb Clone application is deployed and accessible [here](https://ann-booking-app.vercel.app).
 
 ## License
 
