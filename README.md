@@ -1,27 +1,53 @@
-# airbnb-clone
+# Airbnb Clone - Fullstack Booking Application
 
-> a node/react fullstack booking application built with react, node, tailwindcss, mongodb and aws-sdk/client-s3.
+A fullstack booking application built using React, Node.js, Express, MongoDB, Tailwind CSS, and AWS SDK for S3 integration. This application allows users to register, log in, view their Airbnb listings, explore detailed information about each listing, and view all the photos associated with an Airbnb.
 
-## features
+## Features
 
-- To add an airbnb, a user must register and log in.
-- A user's Airbnb listings are displayed.
-- Each airbnb when clicked on moves you to a page with more information about it.
-- A page is dedicated to viewing all the photos of the said airbnb.
-- A user's acccount account page shows their profile, bookings and all airbnbs they added.(You can find this in the profile icon on the header side).
-- Photos are uploaded to aws s3 bucket. (You can upload photo directly from your device or via a link).
+- User Registration and Login: Users must register and log in to add and manage their Airbnb listings.
+- Airbnb Listings: Users can view their own Airbnb listings on the platform.
+- Detailed Airbnb Information: Clicking on an Airbnb listing will display more information about the listing.
+- Photo Gallery: Each Airbnb has a dedicated page to view all the associated photos.
+- Account Page: Users can access their profile, bookings, and all the Airbnb listings they added from the account page (accessible through the profile icon in the header).
+- AWS S3 Integration: Photos are uploaded to an AWS S3 bucket. Users can upload photos directly from their devices or provide links for upload.
 
-## setup & installation
+## Technologies Used
 
-```
-yarn && yarn start (on the client side).
-yarn && yarn dev (on the server side).
-```
+The application utilizes the following technologies:
 
-## .env files
+- Backend: Node.js, Express, MongoDB, JSON Web Tokens (JWT)
+- Frontend: React, Tailwind CSS
+- Cloud Storage: AWS SDK for S3
 
-Change the sample.env file in the server folder to config.env and the client's own to .env and replace the values with your own values.
+## Setup & Installation
 
----
+Follow these steps to set up and run the Airbnb Clone application:
 
-[Live Site](https://ann-booking-app.vercel.app)
+1. Clone the repository: `git clone https://github.com/your-username/airbnb-clone.git`
+2. Install dependencies for the client side: `cd client && yarn`
+3. Install dependencies for the server side: `cd server && yarn`
+4. Rename the sample environment file in the server folder to `config.env` and the client's environment file to `.env`. Replace the placeholder values with your own configurations.
+5. Start the client side: `cd client && yarn start`
+6. Start the server side: `cd server && yarn dev`
+
+## API Endpoints
+
+The backend provides the following API endpoints:
+
+- `POST /api/users/register`: Register a new user.
+- `POST /api/users/login`: Log in existing users.
+- `GET /api/places`: Get all Airbnb listings for a user.
+- `POST /api/places`: Add an Airbnb listing.
+- `PUT /api/places`: Update Airbnb listing.
+- `GET /api/places/:id`: Get detailed information about a specific Airbnb listing.
+- `POST /api/places/:id/photos`: Upload a photo for a specific Airbnb.
+- `GET /api/places/:id/photos`: Get all photos for a specific Airbnb.
+- `GET /api/users/:id/profile`: Get user profile and bookings information.
+
+## Deployment
+
+The Airbnb Clone application is deployed and accessible at [your-deployed-url](https://ann-booking-app.vercel.app).
+
+## License
+
+This project is licensed under the [MIT License](link-to-license). Feel free to use, modify, and distribute the code as per the terms of the license.
